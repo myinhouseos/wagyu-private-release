@@ -170,10 +170,10 @@ export default function App() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold ml-1">Phone Number (Optional)</label>
+                  <label htmlFor="phone" className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold ml-1">Phone Number</label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-600" size={16} />
-                    <input type="tel" id="phone" name="phone" className="w-full bg-neutral-950 border border-neutral-800 px-10 py-3 text-neutral-300 focus:outline-none focus:border-gold/50 transition-colors placeholder:text-neutral-800" placeholder="+27 82 123 4567" />
+                    <input required type="tel" id="phone" name="phone" className="w-full bg-neutral-950 border border-neutral-800 px-10 py-3 text-neutral-300 focus:outline-none focus:border-gold/50 transition-colors placeholder:text-neutral-800" placeholder="+27 82 123 4567" />
                   </div>
                   <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-gold text-[10px] uppercase tracking-wider mt-1" />
                 </div>
@@ -278,7 +278,7 @@ export default function App() {
 
                 <div className="md:col-span-2 space-y-2">
                   <label htmlFor="notes" className="block text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold ml-1">Additional Notes</label>
-                  <textarea id="notes" name="notes" rows={4} className="w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-300 focus:outline-none focus:border-gold/50 transition-colors placeholder:text-neutral-800 resize-none" placeholder="Special requirements, specific delivery schedules, etc."></textarea>
+                  <textarea required id="notes" name="notes" rows={4} className="w-full bg-neutral-950 border border-neutral-800 px-4 py-3 text-neutral-300 focus:outline-none focus:border-gold/50 transition-colors placeholder:text-neutral-800 resize-none" placeholder="Special requirements, specific delivery schedules, etc."></textarea>
                   <ValidationError prefix="Notes" field="notes" errors={state.errors} className="text-gold text-[10px] uppercase tracking-wider mt-1" />
                 </div>
 
